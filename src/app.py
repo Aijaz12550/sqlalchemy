@@ -11,10 +11,11 @@ def create_people():
     john = Person("John Doe", date(1990, 5, 17), 173, 90)
     session.add(bruno)
     session.add(john)
+    session.execute("create database test12")
     session.commit()
     session.close()
 
-# create_people()
+create_people()
 
 def get_people():
     session = session_factory()
